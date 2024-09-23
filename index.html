@@ -279,19 +279,40 @@
 </div>
 
 <script>
-    function submitForm() {
-        // Ambil nilai dari form
-        const name = document.getElementById("name").value;
-        const dob = document.getElementById("dob").value;
-        const gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : '';
-        const message = document.getElementById("message").value;
+   // Fungsi validasi dan pengiriman form
+function submitForm() {
+    const name = document.getElementById("name").value.trim();
+    const dob = document.getElementById("dob").value;
+    const gender = document.querySelector('input[name="gender"]:checked');
+    const message = document.getElementById("message").value.trim();
 
-        // Tampilkan nilai pada bagian tampilan pesan
-        document.getElementById("displayName").textContent = name;
-        document.getElementById("displayDob").textContent = dob;
-        document.getElementById("displayGender").textContent = gender;
-        document.getElementById("displayMessage").textContent = message;
+    // Validasi
+    if (name === "") {
+        alert("Nama harus diisi");
+        return;
     }
+    if (dob === "") {
+        alert("Tanggal lahir harus diisi");
+        return;
+    }
+    if (!gender) {
+        alert("Jenis kelamin harus dipilih");
+        return;
+    }
+    if (message === "") {
+        alert("Pesan harus diisi");
+        return;
+    }
+
+    // Tampilkan nilai pada bagian tampilan pesan
+    document.getElementById("displayName").textContent = name;
+    document.getElementById("displayDob").textContent = dob;
+    document.getElementById("displayGender").textContent = gender.value;
+    document.getElementById("displayMessage").textContent = message;
+
+    alert("Form berhasil disubmit!");
+}
+
 
     function updateTime() {
         const currentTime = new Date().toString();
