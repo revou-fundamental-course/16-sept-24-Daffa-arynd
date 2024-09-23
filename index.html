@@ -6,17 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        // Fungsi untuk menampilkan nama pengguna
-        function displayUsername() {
-            // Misalnya username disimpan di variabel ini (bisa berasal dari login session)
-            var username = "John Doe"; // Ganti dengan variabel dinamis dari sistem login Anda
-            document.getElementById("greeting").innerHTML = "Hi " + username + ", Welcome to My Website";
+        // Fungsi untuk meminta nama pengguna dan menampilkannya
+        function greetUser() {
+            // Meminta nama pengguna
+            const userName = prompt("Silakan masukkan nama Anda:");
+    
+            // Jika pengguna memasukkan nama, tampilkan sapaan
+            if (userName) {
+                document.getElementById("greeting").innerHTML = "Hi " + userName + ", Welcome to My Website";
+            } else {
+                document.getElementById("greeting").innerHTML = "Hi User, Welcome to My Website";
+            }
         }
-    </script>
+    </script>    
     <link rel="stylesheet" href="CSS\styles.CSS">
 </head>
 
-<body onload="displayUsername();">
+<body onload="greetUser();">
+
     <header class="main-header">
         <!-- Logo -->
         <div class="logo-icon"></div>
@@ -38,6 +45,8 @@
             <header>
                 <h1 id="greeting">Hi User, Welcome to My Website</h1>
             </header>
+
+            <hr />
 
             <article>
                 <p>Lorem Ipsum Dolor Sit Amet Adipiscing</p>

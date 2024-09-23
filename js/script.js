@@ -1,10 +1,15 @@
-// Fungsi untuk menampilkan nama pengguna
-function displayUsername() {
-    var username = "John Doe"; // Ganti dengan data dinamis
-    document.getElementById("greeting").innerHTML = "Hi " + username + ", Welcome to My Website";
+// Fungsi untuk meminta nama pengguna dan menampilkannya
+function greetUser() {
+    // Meminta nama pengguna
+    const userName = prompt("Silakan masukkan nama Anda:");
+
+    // Jika pengguna memasukkan nama, tampilkan sapaan
+    if (userName) {
+        document.getElementById("greeting").innerHTML = "Hai " + userName + ", Selamat datang di Website saya";
+    } else {
+        document.getElementById("greeting").innerHTML = "Hai Tamu, Selamat datang di Website saya";
+    }
 }
-
-
 
 // Fungsi validasi dan pengiriman form
 function submitForm() {
