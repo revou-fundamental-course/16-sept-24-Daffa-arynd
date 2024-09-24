@@ -5,9 +5,9 @@ function greetUser() {
 
     // Jika pengguna memasukkan nama, tampilkan sapaan
     if (userName) {
-        document.getElementById("greeting").innerHTML = "Hi " + userName + ", Welcome to My Website";
+        document.getElementById("greeting").innerHTML = "Hi " + userName + ", Welcome to My Musical Vibes";
     } else {
-        document.getElementById("greeting").innerHTML = "Hi User, Welcome to My Website";
+        document.getElementById("greeting").innerHTML = "Hi User, Welcome to My Musical Vibes";
     }
 }
 

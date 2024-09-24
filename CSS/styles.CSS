@@ -141,4 +141,43 @@ input[type="text"]:focus, input[type="date"]:focus, textarea:focus {
     transition: transform 0.6s ease;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#section-home {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: white;
+}
+
+hr {
+    border: 1px solid white;
+}
+
+article {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+article p {
+    margin-bottom: 15px;
+}
 
