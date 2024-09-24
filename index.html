@@ -61,14 +61,14 @@
                     const images = ['BE.jpg', 'PIK.jpg', 'BB.jpg'];
             
                     // Elemen banner
-                    const f = document.querySelector('.photo-banner');
+                    const banner = document.querySelector('.photo-banner');
             
                     // Indeks gambar saat ini (mulai dari 0)
                     let currentImageIndex = 0;
             
                     // Fungsi untuk mengubah gambar latar belakang
                     function changeImage() {
-                        banner.style.backgroundImage = url(BE.jpg);
+                        banner.style.backgroundImage = `url(../assets/${images[currentImageIndex]})`;
                         currentImageIndex = (currentImageIndex + 1) % images.length;
                     }
             

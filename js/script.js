@@ -22,7 +22,7 @@ function greetUser() {
 
   // Fungsi untuk mengubah gambar latar belakang
   function changeImage() {
-      banner.style.backgroundImage = url(BE.jpg);
+      banner.style.backgroundImage = `url(../assets/${images[currentImageIndex]})`;
       currentImageIndex = (currentImageIndex + 1) % images.length;
   }
 
