@@ -12,7 +12,7 @@ function greetUser() {
 }
 
   // Daftar nama file gambar
-  const images = ['BE.jpg', 'PIK.jpg', 'BB.jpg'];
+  const images = ['../assets/BB.jpg', '../assets/logo.jpg', '../assets/BE.jpg'];
             
   // Elemen banner
   const banner = document.querySelector('.photo-banner');
