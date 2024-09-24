@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Fungsi untuk meminta nama pengguna dan menampilkannya
+        function greetUser() {
+            // Meminta nama pengguna
+            const userName = prompt("Silakan masukkan nama Anda:");
+    
+            // Jika pengguna memasukkan nama, tampilkan sapaan
+            if (userName) {
+                document.getElementById("greeting").innerHTML = "Hi " + userName + ", Welcome to My Musical Vibes";
+            } else {
+                document.getElementById("greeting").innerHTML = "Hi User, Welcome to My Musical Vibes";
+            }
+        }
+    </script>    
+    <link rel="stylesheet" href="CSS\styles.CSS">
+</head>
+
+<body onload="greetUser();">
+
+    <header class="main-header">
+        <!-- Logo -->
+        <div class="logo-icon"></div>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#section-home">Home</a>
+            <a href="#section-our-profile">Our Profile</a>
+            <a href="#section-portfolio">Portfolio</a>
+            <a href="#section-message-us">Message Us</a>
+        </nav>
+    </header>
+
+    <hr /> 
+     
+    <main>
+        <!-- Home -->
+        <section id="section-home">
+            <header>
+                <h1 id="greeting">Hi User, Welcome to My Musical Vibes</h1>
+            </header>
+
+            <hr />
+
+            <article>
+                <p>Hii Welcome!!</p> 
+                <p>Feeling nostalgic? Let's dive into my favorite tunes!  From the timeless "Eternal Flame" by The Bangles to the heartwarming "That's What Friends Are For" by Dionne Warwick, these songs always hit the spot. Want a fresh start? "Leaving Yesterday Behind" by KENO is your go-to. And for a touch of magic, "Got to Believe in Magic" by David Pomeranz is the perfect pick. ✨</p>
+                <p>Selain lagu-lagu diatas, Billie Eilish menjadi penyanyi favorit saya saat ini. Suara dan gaya musiknya yang unik yang membuat saya menyukainya. Dengan lirik yang mendalam dan nuansa yang edgy, setiap lagu dia, dari "TV", "Happier Than Ever" sampai "Birds of a Feather," and finally I made Billie Eilish my favorite singer at the moment. dan saya selalu menunggu karya-karya terbarunya!</p>
+
+                <!-- Photo Banner AutoSlide-->
+                <div class="photo-banner"></div>
+            
+                <script>
+                    // Daftar nama file gambar
+                    const images = ['../assets/BB.jpg', '../assets/logo.jpg', '../assets/BE.jpg'];
+            
+                    // Elemen banner
+                    const banner = document.querySelector('.photo-banner');
+            
+                    // Indeks gambar saat ini (mulai dari 0)
+                    let currentImageIndex = 0;
+            
+                    // Fungsi untuk mengubah gambar latar belakang
+                    function changeImage() {
+                        banner.style.backgroundImage = `url(../assets/${images[currentImageIndex]})`;
+                        currentImageIndex = (currentImageIndex + 1) % images.length;
+                    }
+            
+                    document.addEventListener('DOMContentLoaded', function() {
+                    setInterval(changeImage, 5000);
+                });
+                </script>
+            </article>
+        </section>
+
+        <hr />  
+        
+        <!-- Our Profile -->
+        <section id="section-our-profile">
+            <header>
+                <h1>My Favourite Music In The Last Week..</h1>
+            </header>
+
+            <hr /> 
+
+            <div class="profile-icon-container">
+                <div>
+                    <div class="profile-icon-BestofMe"></div>
+                    <h3>The Best of Me</h3>
+                </div>
+    
+                <div>
+                    <div class="profile-icon-HTW"></div>
+                    <h3>Heal The World</h3>
+                </div>
+    
+                <div>
+                    <div class="profile-icon-Moonlight"></div>
+                    <h3>Moonlight</h3>
+                </div>
+            </div>
+        </section>
+
+        <hr /> 
+
+        <!-- Portfolio -->
+        <section id="section-portfolio">
+            <header>
+                <h1>Portfolio</h1>
+            </header>
+
+            <article>
+                <p>Di sini, Anda akan menemukan berbagai proyek dan karya yang terinspirasi oleh musik lama. Dari playlist yang saya buat hingga analisis lagu-lagu yang membentuk budaya, setiap bagian mencerminkan cinta saya untuk melodi klasik.</p>
+                <p>Saya percaya bahwa musik bukan hanya sekadar suara, tetapi juga sebuah perjalanan yang menghubungkan kita. Silakan lihat beberapa contoh karya saya di bawah ini:</p>
+                <ul>
+                    <li><strong>Playlist Nostalgia:</strong> Koleksi lagu-lagu yang membawa kembali kenangan indah.</li>
+                    <li><strong>Analisis Lagu:</strong> Pembahasan mendalam tentang lirik dan konteks budaya dari lagu-lagu favorit saya.</li>
+                    <li><strong>Proyek Kolaborasi:</strong> Kerjasama dengan musisi lain untuk menciptakan karya yang merayakan musik klasik.</li>
+                </ul>
+            </article>
+        </section>
+
+        <hr /> 
+
+        <!-- Message Us -->
+        <section id="section-message-us">
+        <title>Message Us</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+    
+            header {
+                background-color: #333;
+                color: white;
+                padding: 10px;
+                text-align: center;
+            }
+    
+            nav {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+    
+            nav a {
+                color: white;
+                text-decoration: none;
+            }
+    
+            .container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 20px;
+            }
+    
+            .contact-form,
+            .message-display {
+                border: 1px solid #000;
+                padding: 20px;
+                width: 48%;
+                box-sizing: border-box;
+            }
+    
+            label {
+                display: block;
+                margin-bottom: 10px;
+            }
+    
+            input[type="text"],
+            input[type="date"],
+            textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+            }
+    
+            textarea {
+                height: 80px;
+            }
+    
+            button {
+                padding: 10px;
+                width: 100%;
+                background-color: #333;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+    
+            button:hover {
+                background-color: #555;
+            }
+    
+            .message-display p span {
+                font-weight: bold;
+            }
+    
+            footer {
+                text-align: center;
+                padding: 20px;
+                background-color: #333;
+                color: white;
+                position: relative;
+                bottom: 0;
+                width: 100%;
+            }
+    
+            /* Media Queries for Responsive Design */
+            @media screen and (max-width: 768px) {
+                nav {
+                    flex-direction: column;
+                }
+    
+                .container {
+                    flex-direction: column;
+                    padding: 10px;
+                }
+    
+                .contact-form,
+                .message-display {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+    
+            @media screen and (max-width: 480px) {
+                h1, h2, h3 {
+                    font-size: 1.2em;
+                }
+    
+                nav {
+                    font-size: 0.9em;
+                }
+    
+                input[type="text"],
+                input[type="date"],
+                textarea {
+                    font-size: 0.9em;
+                }
+    
+                button {
+                    padding: 8px;
+                    font-size: 0.9em;
+                }
+            }
+        </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Form dengan Validasi-->
+    <section class="contact-form">
+        <h2>Message Us</h2>
+        <form id="messageForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Nama"><br><br>
+
+            <label for="dob">Tanggal Lahir:</label>
+            <input type="date" id="dob" name="dob"><br><br>
+
+            <label for="gender">Jenis Kelamin:</label>
+            <input type="radio" id="male" name="gender" value="Laki-Laki">
+            <label for="male">Laki-Laki</label>
+            <input type="radio" id="female" name="gender" value="Perempuan">
+            <label for="female">Perempuan</label><br><br>
+
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" placeholder="Pesan"></textarea><br><br>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </section>
+
+    <section class="message-display">
+        <p><span>Current time:</span> <span id="currentTime"></span></p>
+        <p><span>Nama:</span> <span id="displayName"></span></p>
+        <p><span>Tanggal Lahir:</span> <span id="displayDob"></span></p>
+        <p><span>Jenis Kelamin:</span> <span id="displayGender"></span></p>
+        <p><span>Pesan:</span> <span id="displayMessage"></span></p>
+    </section>
+</div>
+
+<script>
+   // Fungsi validasi dan pengiriman form
+function submitForm() {
+    const name = document.getElementById("name").value.trim();
+    const dob = document.getElementById("dob").value;
+    const gender = document.querySelector('input[name="gender"]:checked');
+    const message = document.getElementById("message").value.trim();
+
+    // Validasi
+    if (name === "") {
+        alert("Nama harus diisi");
+        return;
+    }
+    if (dob === "") {
+        alert("Tanggal lahir harus diisi");
+        return;
+    }
+    if (!gender) {
+        alert("Jenis kelamin harus dipilih");
+        return;
+    }
+    if (message === "") {
+        alert("Pesan harus diisi");
+        return;
+    }
+
+    // Tampilkan nilai pada bagian tampilan pesan
+    document.getElementById("displayName").textContent = name;
+    document.getElementById("displayDob").textContent = dob;
+    document.getElementById("displayGender").textContent = gender.value;
+    document.getElementById("displayMessage").textContent = message;
+
+    alert("Form berhasil disubmit!");
+}
+
+
+    function updateTime() {
+        const currentTime = new Date().toString();
+        document.getElementById("currentTime").textContent = currentTime;
+    }
+
+    // Memperbarui waktu setiap detik
+    setInterval(updateTime, 1000);
+</script>
+    </main>
+    
+    <hr />
+
+    <footer>
+        <p>Made By Daffa@2024</p>
+    </footer>
+</body>
+
+</html>
