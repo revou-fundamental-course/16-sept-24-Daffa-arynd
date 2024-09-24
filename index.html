@@ -72,8 +72,9 @@
                         currentImageIndex = (currentImageIndex + 1) % images.length;
                     }
             
-                    // Jalankan fungsi pengubah gambar setiap 5 detik (sesuaikan waktunya)
+                    document.addEventListener('DOMContentLoaded', function() {
                     setInterval(changeImage, 5000);
+                });
                 </script>
             </article>
         </section>

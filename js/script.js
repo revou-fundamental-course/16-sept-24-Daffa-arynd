@@ -26,8 +26,10 @@ function greetUser() {
       currentImageIndex = (currentImageIndex + 1) % images.length;
   }
 
-  // Jalankan fungsi pengubah gambar setiap 5 detik (sesuaikan waktunya)
-  setInterval(changeImage, 5000);
+  document.addEventListener('DOMContentLoaded', function() {
+    setInterval(changeImage, 5000);
+});
+
 
 
 // Fungsi validasi dan pengiriman form
