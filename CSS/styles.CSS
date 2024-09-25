@@ -52,6 +52,7 @@ button:hover {
 .photo-banner {
     border: 1px solid;
     height: 800px;
+    background-image: url(../assets/logo.jpg);
     background-position: center;
     background-size: cover;
 }
