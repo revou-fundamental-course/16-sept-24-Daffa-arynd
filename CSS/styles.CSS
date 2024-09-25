@@ -50,11 +50,40 @@ button:hover {
 }
 
 .photo-banner {
+    position: relative;
     border: 1px solid;
     height: 800px;
     background-position: center;
     background-size: cover;
+    transition: background-image 0.5s ease-in-out;
 }
+
+.photo-banner .prev, .photo-banner .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    z-index: 1;
+}
+
+.photo-banner .next {
+    left: 400px;
+
+}
+
+.photo-banner .prev {
+    right: 400px;
+
+}
+
+
+
 
 .profile-icon {
     height: 50px;

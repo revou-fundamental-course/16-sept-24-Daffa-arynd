@@ -53,27 +53,41 @@
                 <p>Feeling nostalgic? Let's dive into my favorite tunes!  From the timeless "Eternal Flame" by The Bangles to the heartwarming "That's What Friends Are For" by Dionne Warwick, these songs always hit the spot. Want a fresh start? "Leaving Yesterday Behind" by KENO is your go-to. And for a touch of magic, "Got to Believe in Magic" by David Pomeranz is the perfect pick. ✨</p>
                 <p>Selain lagu-lagu diatas, Billie Eilish menjadi penyanyi favorit saya saat ini. Suara dan gaya musiknya yang unik yang membuat saya menyukainya. Dengan lirik yang mendalam dan nuansa yang edgy, setiap lagu dia, dari "TV", "Happier Than Ever" sampai "Birds of a Feather," and finally I made Billie Eilish my favorite singer at the moment. dan saya selalu menunggu karya-karya terbarunya!</p>
 
-                <!-- Photo Banner AutoSlide-->
-                <div class="photo-banner"></div> 
+                <!-- Photo Banner AutoSlide -->
+                <div class="photo-banner">
+                    <button class="prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                </div>
+
                 <script>
-                    // Daftar nama file gambar
-                    const images = ['../assets/BB.jpg', '../assets/logo.jpg', '../assets/BE.jpg'];
-            
-                    // Elemen banner
-                    const banner = document.querySelector('.photo-banner');
-            
-                    // Indeks gambar saat ini (mulai dari 0)
-                    let currentImageIndex = 0;
-            
-                    // Fungsi untuk mengubah gambar latar belakang
-                    function changeImage() {
-                        banner.style.backgroundImage = `url(../assets/${images[currentImageIndex]})`;
-                        currentImageIndex = (currentImageIndex + 1) % images.length;
+                    let images = [
+                        'assets/BB.jpg',
+                        'assets/logo.jpg',
+                        'assets/BE.jpg'
+                    ];
+                    
+                    let currentIndex = 0;
+                    const photoBanner = document.querySelector('.photo-banner');
+                    
+                    function showSlide(index) {
+                        currentIndex = (index + images.length) % images.length;
+                        photoBanner.style.backgroundImage = `url(${images[currentIndex]})`;
                     }
-            
-                    // Jalankan fungsi pengubah gambar setiap 5 detik (sesuaikan waktunya)
-                    setInterval(changeImage, 5000);
-                </script>
+                    
+                    function nextSlide() {
+                        showSlide(currentIndex + 1);
+                    }
+                    
+                    function prevSlide() {
+                        showSlide(currentIndex - 1);
+                    }
+                    
+                    // Auto-slide function (change every 3 seconds)
+                    setInterval(nextSlide, 3000);
+                    
+                    // Initialize first slide
+                    showSlide(currentIndex);
+                    </script>
             </article>
         </section>
 
