@@ -82,9 +82,6 @@ button:hover {
 
 }
 
-
-
-
 .profile-icon {
     height: 50px;
     width: 50px;
@@ -210,3 +207,237 @@ article p {
     margin-bottom: 15px;
 }
 
+/* General Styles Portfolio */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+#section-portfolio {
+    padding: 60px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 1400px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header Styles */
+#section-portfolio header h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+}   
+
+#section-portfolio header h1:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: white;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Paragraph Styles */
+#section-portfolio article p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+#section-portfolio article p:nth-child(3) {
+    font-style: italic;
+    font-size: 1.4rem;
+    color: grey;
+    font-weight: bold;
+}
+
+/* List Styles */
+#section-portfolio article ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+#section-portfolio article ul li {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#section-portfolio article ul li:hover {
+    background-color: grey;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+#section-portfolio article ul li strong {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#section-portfolio article ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#section-portfolio article ul li:hover a {
+    color: #fff;
+}
+
+/* Link Icons Animation */
+#section-portfolio article ul li a::after {
+    content: ' 🎶';
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#section-portfolio article ul li:hover a::after {
+    opacity: 1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    #section-portfolio {
+        padding: 40px 15px;
+    }
+
+    #section-portfolio header h1 {
+        font-size: 2rem;
+    }
+
+    #section-portfolio article p {
+        font-size: 1rem;
+    }
+
+    #section-portfolio article ul li {
+        font-size: 1rem;
+    }
+}
+
+/* General Styles Our Profile*/
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#section-our-profile {
+    padding: 60px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 1300px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header Styles */
+#section-our-profile header h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-transform: none;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+#section-our-profile header h1:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: white;
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+/* Divider Styles */
+#section-our-profile hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6 0%, #ff6b6b 100%);
+    margin: 40px 0;
+    width: 100%;
+    border-radius: 2px;
+}
+
+/* Profile Icons Container */
+.profile-icon-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-icon-container div {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.profile-icon-container div:hover {
+    transform: translateY(-10px);
+}
+
+/* Profile Icon Styles */
+.profile-icon-container div .profile-icon-BestofMe,
+.profile-icon-container div .profile-icon-HTW,
+.profile-icon-container div .profile-icon-Moonlight {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Profile Icon Hover Effect */
+.profile-icon-container div:hover .profile-icon-BestofMe,
+.profile-icon-container div:hover .profile-icon-HTW,
+.profile-icon-container div:hover .profile-icon-Moonlight {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+/* Profile Title Styles */
+.profile-icon-container div h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 10px;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+}
+
+.profile-icon-container div:hover h3 {
+    color: hsl(217, 94%, 69%);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .profile-icon-container {
+        flex-direction: column;
+    }
+
+    .profile-icon-container div {
+        margin-bottom: 30px;
+    }
+}
