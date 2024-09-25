@@ -11,23 +11,37 @@ function greetUser() {
     }
 }
 
-  // Daftar nama file gambar
-  const images = ['../assets/BB.jpg', '../assets/logo.jpg', '../assets/BE.jpg'];
-            
-  // Elemen banner
-  const banner = document.querySelector('.photo-banner');
+<script>
+let images = [
+    'assets/BB.jpg',
+    'assets/logo.jpg',
+    'assets/PIK.jpg',
+    'assets/Moonlight.jpg',
+    'assets/BE.jpg'      
+];
 
-  // Indeks gambar saat ini (mulai dari 0)
-  let currentImageIndex = 0;
+let currentIndex = 0;
+const photoBanner = document.querySelector('.photo-banner');
 
-  // Fungsi untuk mengubah gambar latar belakang
-  function changeImage() {
-      banner.style.backgroundImage = `url(../assets/${images[currentImageIndex]})`;
-      currentImageIndex = (currentImageIndex + 1) % images.length;
-  }
+function showSlide(index) {
+    currentIndex = (index + images.length) % images.length;
+    photoBanner.style.backgroundImage = `url(${images[currentIndex]})`;
+}
 
-  // Jalankan fungsi pengubah gambar setiap 5 detik (sesuaikan waktunya)
-  setInterval(changeImage, 5000);
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+// Auto-slide function (change every 3 seconds)
+setInterval(nextSlide, 3000);
+
+// Initialize first slide
+showSlide(currentIndex);
+</script>
 
 
 // Fungsi validasi dan pengiriman form
