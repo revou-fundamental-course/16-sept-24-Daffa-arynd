@@ -57,6 +57,22 @@ button:hover {
     background-size: cover;
 }
 
+.photo-banner1 {
+    border: 1px solid;
+    height: 800px;
+    background-image: url(../assets/BB.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.photo-banner2 {
+    border: 1px solid;
+    height: 800px;
+    background-image: url(../assets/PIK.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
 .profile-icon {
     height: 50px;
     width: 50px;
