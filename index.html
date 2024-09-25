@@ -54,16 +54,13 @@
                 <p>Selain lagu-lagu diatas, Billie Eilish menjadi penyanyi favorit saya saat ini. Suara dan gaya musiknya yang unik yang membuat saya menyukainya. Dengan lirik yang mendalam dan nuansa yang edgy, setiap lagu dia, dari "TV", "Happier Than Ever" sampai "Birds of a Feather," and finally I made Billie Eilish my favorite singer at the moment. dan saya selalu menunggu karya-karya terbarunya!</p>
 
                 <!-- Photo Banner AutoSlide-->
-                <div class="photo-banner"></div>
-                <div class="photo-banner1"></div>
-                <div class="photo-banner2"></div>
-            
+                <div class="photo-banner"></div> 
                 <script>
                     // Daftar nama file gambar
                     const images = ['../assets/BB.jpg', '../assets/logo.jpg', '../assets/BE.jpg'];
             
                     // Elemen banner
-                    const banner = document.querySelector('.photo-banner', '.photo-banner1', '.photo-banner2');
+                    const banner = document.querySelector('.photo-banner');
             
                     // Indeks gambar saat ini (mulai dari 0)
                     let currentImageIndex = 0;
@@ -74,9 +71,8 @@
                         currentImageIndex = (currentImageIndex + 1) % images.length;
                     }
             
-                    document.addEventListener('DOMContentLoaded', function() {
+                    // Jalankan fungsi pengubah gambar setiap 5 detik (sesuaikan waktunya)
                     setInterval(changeImage, 5000);
-                });
                 </script>
             </article>
         </section>
